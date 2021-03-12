@@ -1,100 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 @import "reset.css";
 @import "variables.css";
-@import "status-bar.css";
+
+/* Components */
+@import "components/status-bar.css";
+
+/* Screens */
+@import "screens/login.css";
 
 body{
     font-family: "Open Sans", sans-serif;
 }
 
-.welcome-header {
-    margin: 90px 0px;
-    text-align: center;
-    /* 환영 머리글 모든 내용들을 다 센터로 만들어줘야 해 
-    그 말인즉슨 flex를 쓴다는 거지 */
-    display: flex;
-    /* 
-    그런데 이것들이 좌우로 놓이는 게 앙니라 위아래로 놓였으면 하지?
-    그러면 flex-direction을 써야지  
-    */
-    flex-direction: column;
-    /*
-    이제 교차축을 이용해 센터에 위치하게 만들어야 해
-    */
-    align-items: center;
-}
-
-.welcome-header__title {
-    margin-bottom: 20px;
-    font-size: 25px;
-}
-
-.welcome-header__text {
-    width: 60%;
-    opacity: 0.7;
-}
-
-#login-form {
-    /*
-    일단 input 박스들과 버튼이 옆에 있는 걸 원치 않아. 
-    밑에 있어야 해.
-    */
-    display: flex;
-    /*
-    input 박스들과 버튼이 옆으로 오는 걸 원치 않아.
-    밑으로 가야 해.
-    */
-    flex-direction: column;
-    /*
-    입력 폼과 외곽 사이에 여백을 준다.
-    */
-    margin: 0px 30px;
-}
-
-#login-form input {
-    /* input 태그 테두리를 없앤다. */
-    border: none;
-    /*
-    이메일과 비밀번호를 입력하는 input 태그 안의 윗 공간과 
-    아랫 공간을 둔다.
-    */
-    padding:15px 0px;
-    /* 폰트 사이즈를 키운다. */
-    font-size: 18px;
-    /* 비밀번호 입력 란과 로그인 버튼 사이에 공간을 둔다. */
-    margin-bottom: 25px;
-}
-
-/* input type이 submit이 아닐 때.
-[] 이 사이에 쓰인 것들은 특성 선택자(attribute selector)이다. */
-#login-form input:not([type="submit"]) {
-    /* 아래 테두리를 만든다. */
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    /* 포커스가 천천히 사라지는 효과를 추가한다. */
-    transition: border-color .3s ease-in-out;
-}
-
-#login-form input::placeholder{
-    /* placeholder 글자를 연하게 한다. */
-    color: rgba(0,0,0,0.4);
-}
-
-#login-form input:focus {
-    border-color: var(--yellow);
-}
-
-#login-form input[type="submit"] {
-    background-color: var(--yellow);
-    cursor: pointer;
-    padding: 20px 0px;
-    border-radius: 5px;
-}
-
-#login-form a {
-    text-align:center;
-    /* 링크 밑에 있는 밑줄을 지운다. */
-    text-decoration: none;
-    /* 부모로부터 색을 상속받는다. */
-    color:inherit;
-    font-size: 13px;
-}
