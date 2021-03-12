@@ -46,3 +46,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* input 태그들의 포커스 아웃라인을 초기화한다. */
+input:focus {
+	outline: none;
+}
