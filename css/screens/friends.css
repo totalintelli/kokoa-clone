@@ -8,5 +8,6 @@
 
 #friends-display-link i {
     color: rgba(0, 0, 0, 0.3);
-    padding-left: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
