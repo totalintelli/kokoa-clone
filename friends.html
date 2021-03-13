@@ -1,1 +1,64 @@
-hello this is friends.
+<!--
+    파일명이 index.html인 이유
+    
+    대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어 있다.
+    영어에서 'index'는 '첫 번째'라는 의미다.
+
+    우리 기억을 바탕으로 모든 걸 다 작성할 필요는 없는 거야
+    명심해 기억하고 암기하는 게 아니라 이해하는 거야
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - Kokoa Clone</title>
+</head>
+
+<body>
+    <div class="status-bar">
+        <!-- 
+            status-bar__column : BEM(Block Element Modifier) 
+                참고 : https://css-tricks.com/bem-101/ 
+        -->
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <!-- To Do: Wifi Icon -->
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <!-- Battery Icon -->
+            <i class="fas  fa-battery-full fa-lg"></i>
+            <!-- Lightening Icon -->
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="friends.html"><i class="fas fa-user fa-lg"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="#"><i class="far fa-comment fa-lg"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="#"><i class="fas fa-search fa-lg"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="#"><i class="fas fa-ellipsis-h fa-lg"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://kit.fontawesome.com/66ad44c3c5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

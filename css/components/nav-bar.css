@@ -1,0 +1,9 @@
+/* 아이콘들은 서로 옆에 위치해야 해 */
+.nav {
+    background-color: #f9f9fa;
+    padding: 20px 40px;
+}
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
