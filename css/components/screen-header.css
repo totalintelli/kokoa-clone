@@ -1,0 +1,16 @@
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.screen-header__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* 아이콘들 사이에 여백을 둔다. */
+.screen-header__icons span {
+    margin-left: 25px;
+}
