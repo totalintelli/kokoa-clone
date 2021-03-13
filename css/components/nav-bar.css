@@ -17,5 +17,45 @@
     justify-content: space-between;
 }
 .nav__link {
+    position: relative;
     color:#2e363e;
+}
+
+.nav__notification {
+    background-color: tomato;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+
+    /* 숫자를 중앙에 오게 한다. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+
+    /* 숫자를 아이콘 위에 오게 한다. */
+    /* 가장 가까운 relative를 가진 부모 기준으로 움직인다. */
+    position: absolute;
+
+    /* 숫자를 오른쪽으로 옮긴다. */
+    left: 15px;
+    /* 숫자를 위로 옮긴다. */
+    bottom: 15px;
+}
+
+.nav__notification-ellipsis {
+    background-color: tomato;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    /* 알림표시를 아이콘 위에 오게 한다. */
+    /* 가장 가까운 relative를 가진 부모 기준으로 움직인다. */
+    position: absolute;
+
+    /* 알림표시를 오른쪽으로 옮긴다. */
+    left: 30px;
+    /* 알림표시를 위로 옮긴다. */
+    bottom: 30px;
 }
