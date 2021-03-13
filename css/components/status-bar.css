@@ -1,7 +1,18 @@
 .status-bar {
+    /* 스크롤이 내려가도 항상 상단에 상태바를 고정한다. */
+    position: fixed;
+    top: 0;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     padding: 5px 3px;
+
+}
+
+.status-bar__row {
+    display: flex;
+    justify-content: space-between;
 }
 
 .status-bar__column {

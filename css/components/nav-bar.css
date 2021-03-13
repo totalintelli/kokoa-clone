@@ -1,9 +1,19 @@
 /* 아이콘들은 서로 옆에 위치해야 해 */
 .nav {
+    /* 너가 원하는 곳에 뭔가가 스크롤해도 계속 있기를 바란다면 어떻게 해야할까? */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
     background-color: #f9f9fa;
-    padding: 20px 40px;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(121, 121, 121, 0.3);
 }
 .nav__list {
     display: flex;
     justify-content: space-between;
+}
+.nav__link {
+    color:#2e363e;
 }
