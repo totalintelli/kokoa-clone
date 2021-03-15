@@ -1,4 +1,25 @@
 #chat-screen {
   /* 채팅창 배경색을 입힌다. */
   background-color: #abc1d1;
+  height: 1100vh;
+}
+
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 5px;
+  background-color: #abc1d1;
+  /* z-index는 layer 같은 것이다.
+  z-index는 절대적인 위치(absolute position)나
+  고정된 위치(fixed position)에 대해서 설정할 수 있다. */
+  z-index: 1;
+}
+
+.main-chat {
+  margin-top: 150px;
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
 }

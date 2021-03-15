@@ -11,3 +11,21 @@
   font-size: 28px;
   font-weight: 600;
 }
+
+.alt-header__column {
+  /* 화면을 3분할한다. */
+  width: 33%;
+}
+
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+
+.alt-header__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-header__column:last-child span {
+  margin-left: 20px;
+}
