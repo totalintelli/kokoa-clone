@@ -13,8 +13,6 @@
   flex-direction: column;
   /* 그래서 이제 Cross Axis에서 바뀌는 게 필요하니까... */
   align-items: center;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 /* 아이콘의 크기를 키운다.
@@ -26,4 +24,24 @@
 
 .find-icons__icon span {
   margin-top: 18px;
+}
+
+.recommended-friends {
+  margin: 25px 0px;
+  padding: 25px 0px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+}
+
+.recommended-friends__title {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.recommended-friends span {
+  margin: 100px 0;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
 }
