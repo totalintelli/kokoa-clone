@@ -31,6 +31,18 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    /* 해당 element를 숨긴다. 
+    해당 element는 여전히 존재한다. */
+    visibility: hidden;
+  }
+}
+
 #splash-screen {
   background-color: var(--yellow);
   position: absolute;
@@ -41,4 +53,9 @@
   justify-content: center;
   align-items: center;
   font-size: 132px;
+
+  /* 사라지는 애니메이션을 실행한다. */
+  /* forwards 키워드는 마지막 키프레임을 기억한다. */
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  animation-delay: 3s; /* 3초 후에 애니메이션이 사라진다. */
 }
