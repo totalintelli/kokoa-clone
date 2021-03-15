@@ -1,0 +1,29 @@
+.find-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.find-icons__icon {
+  display: flex;
+  /* 'flex-direction: row'는 옆에 오는 거고
+  'flex-direction: column'은 다음 줄에 오는 거다. */
+  /* Cross Axis랑 Main Axis를 바꾼다.
+  flex-direction에 따라 Cross Axis와 Main Axis가 바뀐다. */
+  /* 이제 Main Axis는 세로축이고 Cross Axis가 가로축이다. */
+  flex-direction: column;
+  /* 그래서 이제 Cross Axis에서 바뀌는 게 필요하니까... */
+  align-items: center;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* 아이콘의 크기를 키운다.
+필요하면 class 명을 추가하면 될 것 같다. */
+.find-icons__icon i {
+  /* 아이콘 크기를 font-size를 이용해서 조절할 수 있다. */
+  font-size: 35px;
+}
+
+.find-icons__icon span {
+  margin-top: 18px;
+}
