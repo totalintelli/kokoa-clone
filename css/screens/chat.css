@@ -1,7 +1,7 @@
 #chat-screen {
   /* 채팅창 배경색을 입힌다. */
   background-color: #abc1d1;
-  height: 1100vh;
+  height: 500vh;
 }
 
 #chat-screen .alt-header {
@@ -22,14 +22,26 @@
   z-index: 1;
 }
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
   /* status bar와 header는 main 부분을 덮고 있다.
     덮고 있는 영역을 고려해서 margin-top 값을 정했다. */
-  margin-top: 150px;
+  margin-top: 180px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.8s linear;
 }
 
 #chat-screen .status-bar {
@@ -114,6 +126,7 @@ order 변수는 display가 flex인 경우에 가능하다. */
   보여주기 위해서 아래 코드를 입력한다. */
   box-sizing: border-box;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -130,10 +143,12 @@ order 변수는 display가 flex인 경우에 가능하다. */
 }
 
 .reply input {
-  padding: 12px;
+  padding: 14px;
   width: 100%;
   border: var(--main-border);
-  border-radius: 20px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
@@ -163,4 +178,28 @@ order 변수는 display가 flex인 경우에 가능하다. */
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* focus-within은 reply 내부에 focus 된 element가 있는지 보는 것이다. 
+reply 내부에 어떤 element가 focus 되어 있다면 .reply:focus-within가 참이 되고, 
+.reply__column:first-child에 실행한다.*/
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 98vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
