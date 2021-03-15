@@ -1,36 +1,36 @@
 .status-bar {
-    /* 스크롤이 내려가도 항상 상단에 상태바를 고정한다. */
-    position: fixed;
-    top: 0;
-    width: 100%;
+  /* 스크롤이 내려가도 항상 상단에 상태바를 고정한다. */
+  position: fixed;
+  top: 0;
+  width: 100%;
 
-    display: flex;
-    justify-content: center;
-    padding: 5px 3px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3px;
 }
 
 .status-bar__row {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .status-bar__column {
-    width:33%;
+  width: 33%;
 }
 
 .status-bar__column:first-child span {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 .status-bar__column:nth-child(2) {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .status-bar__column:last-child {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.status-bar__column .fa-battery-full{
-    margin: 0px 5px;
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
 }
