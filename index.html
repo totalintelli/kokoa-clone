@@ -9,45 +9,44 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Kokoa Clone</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="status-bar">
-        <div class="status-bar__row">
-            <!-- 
+      <div class="status-bar__row">
+        <!-- 
                 status-bar__column : BEM(Block Element Modifier) 
                     참고 : https://css-tricks.com/bem-101/ 
             -->
-            <div class="status-bar__column">
-                <span>No Service</span>
-                <!-- To Do: Wifi Icon -->
-                <i class="fas fa-wifi"></i>
-            </div>
-            <div class="status-bar__column">
-                <span>18:43</span>
-            </div>
-            <div class="status-bar__column">
-                <span>110%</span>
-                <!-- Battery Icon -->
-                <i class="fas  fa-battery-full fa-lg"></i>
-                <!-- Lightening Icon -->
-                <i class="fas fa-bolt"></i>
-            </div>
+        <div class="status-bar__column">
+          <span>No Service</span>
+          <!-- To Do: Wifi Icon -->
+          <i class="fas fa-wifi"></i>
         </div>
+        <div class="status-bar__column">
+          <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+          <span>110%</span>
+          <!-- Battery Icon -->
+          <i class="fas fa-battery-full fa-lg"></i>
+          <!-- Lightening Icon -->
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
     </div>
 
     <header class="welcome-header">
-        <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
-        <p class="welcome-header__text">
-            If you have a Kokoa Account, log in your email or phone number.
-        </p>
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa Account, log in your email or phone number.
+      </p>
     </header>
 
     <!-- action은 어떤 페이지로 data를 보낼건지 지정할 수 있다.
@@ -58,14 +57,19 @@
     username이랑 password를 GET 방식으로 보내면 안 된다.
     URL에 포함되어도 상관없는 정보들을 GET 방식으로 보내는 것이다. -->
     <form action="friends.html" method="get" id="login-form">
-        <input name="username" type="text" placeholder="Email or phone number">
-        <input name="password" type="password" placeholder="Password">
-        <input type="submit" value="Log In">
-        <a href="#">Find Kokoa Account or Password</a>
+      <input name="username" type="text" placeholder="Email or phone number" />
+      <input name="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <a href="#">Find Kokoa Account or Password</a>
     </form>
 
+    <div id="no-mobile">
+      <span>Your screen is too big ㅠㅠ</span>
+    </div>
 
-    <script src="https://kit.fontawesome.com/66ad44c3c5.js" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/66ad44c3c5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
