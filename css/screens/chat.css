@@ -48,6 +48,7 @@
 .message-row {
   width: 100%;
   display: flex;
+  margin-bottom: 25px;
 }
 
 .message-row img {
@@ -81,4 +82,22 @@
   border-radius: 15px;
   border-top-left-radius: 0px;
   margin-right: 5px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+/* flex children의 순서를 변경해서 말풍선과 메시지의 위치를 변경한다.
+order 변수는 display가 flex인 경우에 가능하다. */
+.message-row--own .message__info {
+  flex-direction: row-reverse;
 }
