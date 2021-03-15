@@ -101,3 +101,66 @@ order 변수는 display가 flex인 경우에 가능하다. */
 .message-row--own .message__info {
   flex-direction: row-reverse;
 }
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  /* 위에 입력한 padding이 element를 안 보이게 하고 있어서
+  보여주기 위해서 아래 코드를 입력한다. */
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  padding: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -3px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
