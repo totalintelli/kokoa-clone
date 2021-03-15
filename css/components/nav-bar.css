@@ -1,61 +1,49 @@
 /* 아이콘들은 서로 옆에 위치해야 해 */
 .nav {
-    /* 너가 원하는 곳에 뭔가가 스크롤해도 계속 있기를 바란다면 어떻게 해야할까? */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  /* 너가 원하는 곳에 뭔가가 스크롤해도 계속 있기를 바란다면 어떻게 해야할까? */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
-    background-color: #f9f9fa;
-    padding: 20px 50px;
-    border-top: 1px solid rgba(121, 121, 121, 0.3);
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
 
-    /* 박스 사이즈는 변경하지 않는다. */
-    box-sizing: border-box;
+  /* 박스 사이즈는 변경하지 않는다. */
+  box-sizing: border-box;
 }
 .nav__list {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .nav__link {
-    position: relative;
-    color:#2e363e;
+  position: relative;
+  color: #2e363e;
 }
 
 .nav__notification {
-    background-color: tomato;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+  /* 숫자를 아이콘 위에 오게 한다. */
+  /* 가장 가까운 relative를 가진 부모 기준으로 움직인다. */
+  position: absolute;
 
-    /* 숫자를 중앙에 오게 한다. */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 600;
-
-    /* 숫자를 아이콘 위에 오게 한다. */
-    /* 가장 가까운 relative를 가진 부모 기준으로 움직인다. */
-    position: absolute;
-
-    /* 숫자를 오른쪽으로 옮긴다. */
-    left: 15px;
-    /* 숫자를 위로 옮긴다. */
-    bottom: 15px;
+  /* 숫자를 오른쪽으로 옮긴다. */
+  left: 15px;
+  /* 숫자를 위로 옮긴다. */
+  bottom: 15px;
 }
 
 .nav__notification-ellipsis {
-    background-color: tomato;
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
+  background-color: tomato;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
 
-    /* 알림표시를 아이콘 위에 오게 한다. */
-    /* 가장 가까운 relative를 가진 부모 기준으로 움직인다. */
-    position: absolute;
+  /* 알림표시를 아이콘 위에 오게 한다. */
+  /* 가장 가까운 relative를 가진 부모 기준으로 움직인다. */
+  position: absolute;
 
-    /* 알림표시를 오른쪽으로 옮긴다. */
-    left: 30px;
-    /* 알림표시를 위로 옮긴다. */
-    bottom: 30px;
+  /* 알림표시를 오른쪽으로 옮긴다. */
+  left: 30px;
+  /* 알림표시를 위로 옮긴다. */
+  bottom: 30px;
 }
